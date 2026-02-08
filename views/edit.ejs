@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h2>Edit Task</h2>
+
+    <form action="/update/<%= task.id %>" method="POST">
+        <input type="text" name="title" value="<%= task.title %>" required />
+        <br/>
+        <textarea name="description" required>
+            <%= task.description %>
+        </textarea>
+        <br/>
+        <button type="submit">Update Task</button>
+    </form>
+    <a href="/" class="back-link">Back</a>
+
+</body>
+
+</html>

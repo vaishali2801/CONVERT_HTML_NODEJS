@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h2>Task List</h2>
+
+    <a href="/add" class="add-btn">➕ Add New Task</a>
+
+    <ul>
+            <% tasks.forEach(task=> { %>
+            <li>
+                <strong>
+                    <%= task.title %>
+                </strong><br>
+                <%= task.description %><br><br>
+
+                    <a href="/edit/<%= task.id %>">Edit</a>
+                    <a href="/delete/<%= task.id %>">Delete</a>
+            </li>
+            <% }) %>
+    </ul>
+
+</body>
+
+</html>
